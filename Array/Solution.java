@@ -1,6 +1,4 @@
-import java.util.Arrays;
-
-public class Dups {
+public class Solution {
 
     public static int duplicates(int[] arr) {
         int l = 0;
@@ -8,14 +6,15 @@ public class Dups {
 
         while(r < arr.length) {
             if (arr[l] != arr[r]) {
-                arr[++l] = arr[r];
+                l++;
+                arr[l] = arr[r];
             }
             r++;
         }
         return 0;
     }
 
-    public static int duplicates2(int[] nums) {
+    public int duplicates2(int[] nums) {
         if (nums.length < 2) {
             return nums.length;
         }
@@ -34,11 +33,28 @@ public class Dups {
         return prev+1;
     }
 
-    public static void main(String[] args) {
-        System.out.println("Duplicates numbers");
-        int[] a = {0,0,1,1,1,2,2,3,3,4};
-        System.out.println("Input:\t"+ Arrays.toString(a));
-        duplicates2(a);
-        System.out.println("Output:\t"+ Arrays.toString(a));
+    public int maximumDifference(int[] nums) {
+        if (nums == null || nums.length < 2) {
+            return -1;
+        }
+        int currMin = nums[0];
+        int currDiff = -1;
+
+        for (int i = 1; i<nums.length; i++) {
+            if (nums[i] < currMin) {
+                currMin = nums[i];
+            } else {
+                int diff = nums[i] - currMin;
+                if (diff > 0 && diff > currDiff) {
+                    currDiff = diff;
+                }
+            }
+        }
+        return currDiff;
     }
+
+    public static void main(String[] args) {
+        
+    }
+    
 }
