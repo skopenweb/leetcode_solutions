@@ -22,6 +22,7 @@ public class Sorter {
         }
     }
 
+    @SuppressWarnings("unused")
     private static int partition(int[] a, int start, int end) {
         int pivot = a[end];
 

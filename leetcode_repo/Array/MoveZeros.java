@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-class Solution {
+class MoveZeros {
 
     public void moveZeroes(int[] nums) {
         int i = 0;
@@ -42,7 +42,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution s = new Solution();
+        MoveZeros s = new MoveZeros();
         
         System.out.println("MoveZeros");
         int[] a = {0,1,0,3,12};

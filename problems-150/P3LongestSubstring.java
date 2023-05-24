@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class P3LongestSubstring {
     public int lengthOfLongestSubstring(String s) {
         Map<Character, Integer> m = new HashMap<>();
         int maxLen = 0;
@@ -31,7 +31,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution s =  new Solution();
+        P3LongestSubstring s =  new P3LongestSubstring();
         System.out.println(s.lengthOfLongestSubstring("abcdefcde"));
     }
 }
