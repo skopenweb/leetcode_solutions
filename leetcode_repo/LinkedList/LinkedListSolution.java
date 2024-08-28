@@ -1,4 +1,4 @@
-public class Solution {
+public class LinkedListSolution {
 
     private static class ListNode {
         int x;
@@ -9,18 +9,18 @@ public class Solution {
         if (head == null) {
             return null;
         }
-        
+
         int num = 0;
         ListNode curr = head;
         while (curr != null) {
             curr = curr.next;
-            num ++;
+            num++;
         }
         if (num == n) {
             return head.next;
-        } 
+        }
         curr = head;
-        for (int i=1; i < num - n; i++) {
+        for (int i = 1; i < num - n; i++) {
             curr = curr.next;
         }
         curr.next = curr.next.next;
@@ -28,7 +28,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        
+
     }
-    
+
 }
